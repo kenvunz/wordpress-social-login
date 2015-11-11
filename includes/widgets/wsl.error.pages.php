@@ -208,7 +208,33 @@ if( ! function_exists( 'wsl_render_error_page' ) )
 				padding-top: 10px;
 				margin-top: 10px;
 				border-top: 1px solid #d2d2d2;
+				font-family: monospace;
+				font-size: 0.9em;
 			}
+
+			#debuginfo hash {
+				border: 1px solid #ddd;
+				border-radius: 2px;
+				padding: 1em;
+				display: block;
+				background-color: #f8f8f8;
+
+				/* These are technically the same, but use both */
+				overflow-wrap: break-word;
+				word-wrap: break-word;
+
+				-ms-word-break: break-all;
+				/* This is the dangerous one in WebKit, as it breaks things wherever */
+				word-break: break-all;
+				/* Instead use this non-standard one: */
+				word-break: break-word;
+
+				/* Adds a hyphen where the word breaks, if supported (No Blink) */
+				-ms-hyphens: auto;
+				-moz-hyphens: auto;
+				-webkit-hyphens: auto;
+				hyphens: auto;
+            		}
 		</style>
 		<script>
 			function xi(){ document.getElementById('debuginfo').style.display = 'block'; }
